@@ -497,166 +497,208 @@ footer {
     }
 }
 
-/* Styling for Quantum Project Section */
-#quasi-project {
-    background: rgba(255, 255, 255, 0.08); /* Soft glass effect */
-    border-radius: 12px;
-    padding: 70px 30px;
+/* === PINNs Project Section (Enhanced Premium Styling) === */
+#pinns-project {
+    padding: 100px 0;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(15px);
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, rgba(0, 87, 184, 0.07), rgba(0, 212, 170, 0.05));
+    position: relative;
+    overflow: hidden;
 }
 
-/* Section Heading */
-#quasi-project h2 {
+/* Subtle Light Pattern Effect */
+#pinns-project::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 87, 184, 0.15), transparent);
+    top: 10%;
+    left: 15%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#pinns-project::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0, 212, 170, 0.15), transparent);
+    bottom: 15%;
+    right: 10%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Section Heading with Elegant Animation */
+#pinns-project h2 {
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--primary-color);
-    text-shadow: 0 4px 12px rgba(0, 87, 184, 0.6);
-    margin-bottom: 25px;
-    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
-/* Paragraph Styling */
-#quasi-project p {
-    font-size: 1.2rem;
-    color: #222; /* Darker text for better contrast */
-    margin-bottom: 30px;
-    line-height: 1.8;
+/* Expanding Underline Effect */
+#pinns-project h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
-/* Section Background Boxes */
-.section-box {
-    background: rgba(255, 255, 255, 0.12); /* Slightly darker glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 30px auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+#pinns-project h2:hover::after {
+    width: 100px;
+}
+
+/* Container */
+#pinns-project .container {
     max-width: 1000px;
-    text-align: left;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Hover Effect */
-.section-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 87, 184, 0.3);
-}
-
-/* Subheading Styling */
-#quasi-project h3 {
-    font-size: 1.8rem;
+/* Section Titles */
+#pinns-project h3 {
+    font-size: 1.9rem;
     font-weight: 600;
-    color: var(--accent-color);
-    margin-bottom: 18px;
+    color: var(--secondary-color);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
 }
 
-/* Bullet Points */
-#quasi-project ul {
+/* Paragraphs */
+#pinns-project p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+/* Glassmorphic Cards for Lists */
+#pinns-project ul {
     list-style-type: none;
-    padding: 0;
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
+    padding-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 87, 184, 0.15);
+    transition: var(--transition);
 }
 
-#quasi-project ul li {
-    font-size: 1.1rem;
-    padding: 10px 0;
-    color: #111; /* Darker text for improved readability */
+/* List Items with Icon */
+#pinns-project ul li {
+    font-size: 1.2rem;
+    color: white;
+    background: var(--primary-color);
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 8px 0;
+    text-align: left;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
-/* Quantum-Themed List Icons */
-#quasi-project ul li::before {
-    content: "⚛"; /* Quantum icon */
-    font-size: 1.4rem;
-    margin-right: 12px;
-    color: var(--primary-color);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover Effects on List Items */
-#quasi-project ul li:hover::before {
-    transform: scale(1.2);
-}
-
-/* Links with Glow Effect */
-#quasi-project a {
-    color: #FFA500;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-#quasi-project a:hover {
-    color: #FFD700	;
-}
-
-/* Contact Info */
-#quasi-project p b {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-}
-
-/* Objectives Box Styling */
-.objectives-box {
-    background: rgba(255, 255, 255, 0.2); /* Slightly more visible glass effect */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Define the box border */
-    border-radius: 15px; /* Smooth rounded corners */
-    padding: 30px;
-    margin: 40px auto; /* Space around the section */
-    max-width: 900px; /* Keep the box contained */
-    text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px); /* Glass effect */
-    position: relative; /* Ensure it sits in the correct place */
-}
-
-/* Ensure the heading is inside the box */
-.objectives-box h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
+/* Bullet Icons */
+#pinns-project ul li::before {
+    content: "🔹 ";
+    font-weight: bold;
+    margin-right: 10px;
     color: var(--accent-color);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* Style the list */
-.objectives-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Style the list items */
-.objectives-box ul li {
-    font-size: 1.1rem;
-    padding: 10px 0;
-    color: #222; /* Make text darker */
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-/* Quantum Icon Styling */
-.objectives-box ul li::before {
-    content: "⚛"; /* Quantum-inspired icon */
-    font-size: 1.4rem;
-    margin-right: 12px;
-    color: var(--primary-color);
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Hover Effects */
-.objectives-box ul li:hover::before {
-    transform: scale(1.2);
-    color: var(--accent-color);
+#pinns-project ul li:hover {
+    background: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* Animated Floating Effect */
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+#pinns-project ul:hover {
+    animation: floatEffect 3s infinite ease-in-out;
+}
+
+/* Interactive Background Hover Effect */
+#pinns-project:hover::before {
+    width: 300px;
+    height: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+/* Fade In on Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientGlow {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+#pinns-project ul:hover {
+    animation: gradientGlow 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    #pinns-project h2 {
+        font-size: 2.3rem;
+    }
+    #pinns-project h3 {
+        font-size: 1.6rem;
+    }
+    #pinns-project p, #pinns-project ul li {
+        font-size: 1.1rem;
+    }
 }
